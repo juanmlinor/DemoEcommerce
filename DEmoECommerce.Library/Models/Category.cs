@@ -1,0 +1,16 @@
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace DEmoECommerce.Library.Models
+{
+    public class Category
+    {
+        public int Id { get; set; }
+
+        [Display(Name = "Categoría")]
+        [MaxLength(100, ErrorMessage = "El campo {0} no puede tener más de {1} caracteres.")]
+        [Required(ErrorMessage = "El campo {0} es obligatorio.")]
+        public string Name { get; set; }
+        public string Image { get; set; }
+        public List<Product> Products { get; set; }
+    }
+}
